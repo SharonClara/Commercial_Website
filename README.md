@@ -779,14 +779,21 @@ footer span {
 
 ## OUTPUT
 
-![alt text](image.png)
 
-![alt text](image-1.png)
 
-![alt text](image-2.png)
+<img width="1917" height="1015" alt="26a60ab2-14c5-4ff5-bd6c-8b967913c86f" src="https://github.com/user-attachments/assets/f5d093bc-2543-4d33-9db5-b35096cdb7bd" />
 
-![alt text](image-3.png)
+<img width="1916" height="1013" alt="f05c05b7-ed93-4156-be1a-7d377153e3a3" src="https://github.com/user-attachments/assets/40f92e4f-f470-48fc-a0c6-89b1f55c8da8" />
 
-![alt text](image-4.png)
+
+<img width="1917" height="843" alt="81c6b98c-8d03-4188-93f1-697442ef084b" src="https://github.com/user-attachments/assets/af07e81a-eba0-4982-b066-49311b04cd3c" />
+
+
+
+<img width="1917" height="1020" alt="4fb720d4-6d75-41c6-813f-fba76bcab32c" src="https://github.com/user-attachments/assets/cab3db34-0bb8-4624-b677-ab493ea24b2b" />
+
+
+<img width="1916" height="988" alt="3b10d1cb-7e72-4642-b991-ce4f70f5f70b" src="https://github.com/user-attachments/assets/d2bac74a-b44d-41f0-814c-232f58769b38" />
+
 ## RESULT
 The program for creating commercial website using CSS Flexbox is executed successfully.
