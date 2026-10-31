@@ -1,0 +1,717 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ShoppyEasyy Online Shopping Store</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8f8f8;
+    color: #333;
+}
+
+
+header {
+    background: #202020;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 28px;
+    color: #ff9800;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff9800;
+}
+
+/* HOME SECTION */
+
+.home {
+    min-height: 500px;
+    background: linear-gradient(120deg, #292929, #666);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 60px 8%;
+}
+
+.home-content {
+    max-width: 500px;
+}
+
+.home-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.home-content h1 span {
+    color: #ff9800;
+}
+
+.home-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.shop-btn {
+    display: inline-block;
+    background: #ff9800;
+    color: white;
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.shop-btn:hover {
+    background: #e66b00;
+}
+
+.home-image img {
+    width: 350px;
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.section-description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+
+.about {
+    padding: 70px 8%;
+    background: white;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 250px;
+    line-height: 1.9;
+    font-size: 17px;
+}
+
+.about-image img {
+    width: 350px;
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+
+.products {
+    padding: 70px 8%;
+    background: #f5f5f5;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.product {
+    width: 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+}
+
+.product img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product h3 {
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.price {
+    color: #ff5722;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.product button {
+    background: #222;
+    color: white;
+    border: none;
+    padding: 11px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product button:hover {
+    background: #ff9800;
+}
+
+
+.offer {
+    background: linear-gradient(120deg, #ff9800, #ff5722);
+    padding: 55px 20px;
+    text-align: center;
+    color: white;
+}
+
+.offer h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.offer p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* DELIVERY AND SERVICES */
+
+.services {
+    padding: 70px 8%;
+    background: white;
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background: #f5f5f5;
+    width: 250px;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.service-card .emoji {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+
+.reviews {
+    padding: 70px 8%;
+    background: #f5f5f5;
+}
+
+.review-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.review {
+    background: white;
+    width: 300px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.stars {
+    color: #ff9800;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.review p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.review h4 {
+    color: #ff5722;
+}
+
+
+.contact {
+    padding: 55px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.contact p {
+    line-height: 2;
+    color: #555;
+}
+
+footer {
+    background: #202020;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    line-height: 2;
+}
+
+footer span {
+    color: #ff9800;
+    font-weight: bold;
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .home {
+        text-align: center;
+        gap: 30px;
+    }
+
+    .home-content h1 {
+        font-size: 34px;
+    }
+
+    .home-image img {
+        width: 280px;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .product {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .service-card,
+    .review {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+
+<header>
+
+    <div class="logo">ShoppyEasyy :) </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#services">Delivery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
+
+
+<section class="home" id="home">
+
+    <div class="home-content">
+
+        <h1>Welcome to <span>ShoppyEasyy!</span></h1>
+
+        <p>
+            Discover quality products for your everyday lifestyle.
+            Shop your favourite home accessories and electronics
+            at affordable prices with a comfortable online shopping
+            experience.
+        </p>
+
+        <a href="#products" class="shop-btn">Explore Products</a>
+
+    </div>
+
+    <div class="home-image">
+
+        <img
+        src="img/store.jpg"
+        alt="Shopping Store">
+
+    </div>
+
+</section>
+
+
+
+<section class="about" id="about">
+
+    <h2 class="section-title">About Our Store</h2>
+
+    <p class="section-description">
+        Your trusted destination for quality online shopping.
+    </p>
+
+    <div class="about-container">
+
+        <div class="about-text">
+
+            <h2>Shopping Made Simple!</h2>
+
+            <p>
+                ShopEase is an online shopping store designed to
+                make your shopping experience easy, comfortable
+                and enjoyable.
+            </p>
+
+            <p>
+                We offer carefully selected products including
+                home accessories, furniture and electronic
+                accessories at reasonable prices.
+            </p>
+
+            <p>
+                Our goal is to provide quality products,
+                affordable prices and reliable customer service.
+            </p>
+
+        </div>
+
+        <div class="about-image">
+
+            <img
+            src="img/onlineshop.jpg"
+            alt="Online Shopping">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="products" id="products">
+
+    <h2 class="section-title">Our Products</h2>
+
+    <p class="section-description">
+        Explore our exclusive collection of products.
+    </p>
+
+    <div class="product-container">
+
+
+
+        <div class="product">
+
+            <img
+            src="img/glass bottle.jpg"
+            alt="Glass Bottle">
+
+            <h3>Glass Milk Storage Bottle</h3>
+
+            <p class="price">₹299</p>
+
+            <button>Buy Now</button>
+
+        </div>
+
+
+
+        <div class="product">
+
+            <img
+            src="img/wallclock.jpg"
+            alt="Wall Clock">
+
+            <h3>Modern Wall Clock</h3>
+
+            <p class="price">₹799</p>
+
+            <button>Buy Now</button>
+
+        </div>
+
+
+
+        <div class="product">
+
+            <img
+            src="img/modern sofa.jpg"
+            alt="Sofa">
+
+            <h3>Luxury Modern Sofa</h3>
+
+            <p class="price">₹12,999</p>
+
+            <button>Buy Now</button>
+
+        </div>
+
+
+        <div class="product">
+
+            <img
+            src="img/airpods.jpg"
+            alt="AirPods">
+
+            <h3>Wireless AirPods</h3>
+
+            <p class="price">₹2,499</p>
+
+            <button>Buy Now</button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="offer">
+
+    <h2>Special Shopping Offers!</h2>
+
+    <p>
+        Enjoy exciting deals on your favourite products.<br>
+        Get quality products at affordable prices.<br>
+        Shop today and enjoy a wonderful shopping experience!
+    </p>
+
+</section>
+
+
+
+<section class="services" id="services">
+
+    <h2 class="section-title">Our Delivery & Services</h2>
+
+    <p class="section-description">
+        We make your shopping experience safe and convenient.
+    </p>
+
+    <div class="service-container">
+
+        <div class="service-card">
+
+            <div class="emoji">🚚</div>
+
+            <h3>Fast Delivery</h3>
+
+            <p>
+                Get your favourite products delivered
+                safely to your doorstep.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="emoji">🔒</div>
+
+            <h3>Secure Payment</h3>
+
+            <p>
+                Enjoy a safe and secure shopping
+                payment experience.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="emoji">🎧</div>
+
+            <h3>Customer Support</h3>
+
+            <p>
+                Our customer support section is here
+                to help with your shopping queries.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="emoji">↩️</div>
+
+            <h3>Easy Returns</h3>
+
+            <p>
+                Enjoy a convenient return experience
+                according to our return policy.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="reviews" id="reviews">
+
+    <h2 class="section-title">Customer Reviews</h2>
+
+    <p class="section-description">
+        What our customers say about ShopEase.
+    </p>
+
+    <div class="review-container">
+
+        <div class="review">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "The glass bottle quality is good.
+                The shopping experience was simple and easy."
+            </p>
+
+            <h4>- Priya</h4>
+
+        </div>
+
+
+        <div class="review">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "I love the modern sofa design.
+                The product looks beautiful in my living room."
+            </p>
+
+            <h4>- Rahul</h4>
+
+        </div>
+
+
+        <div class="review">
+
+            <div class="stars">★★★★☆</div>
+
+            <p>
+                "The wireless earbuds are stylish.
+                I enjoyed browsing the products."
+            </p>
+
+            <h4>- Anitha</h4>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="contact" id="contact">
+
+    <h2 class="section-title">Contact Us</h2>
+
+    <p>
+        Have questions about our products?<br>
+        We are happy to help you!
+    </p>
+
+    <p>Email: support@shoppyeasyy.com</p>
+
+    <p>Website: www.shoppyeasyy.com</p>
+
+</section>
+
+
+
+<footer>
+
+    <p>© 2026 ShoppyEasyy. All Rights Reserved.</p>
+
+    <p>Designed by <span>Sharon Clara A</span></p>
+
+
+</footer>
+
+</body>
+</html>
